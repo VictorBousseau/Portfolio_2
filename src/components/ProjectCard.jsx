@@ -1,37 +1,37 @@
 import { ExternalLink, Github } from 'lucide-react';
 
 const ProjectCard = ({ title, description, tags, image, demoLink, repoLink }) => {
-    return (
-        <div className="project-card">
-            <div className="project-image">
-                {image ? (
-                    <img src={image} alt={title} />
-                ) : (
-                    <div className="placeholder-image"></div>
-                )}
-            </div>
-            <div className="project-content">
-                <h3 className="project-title">{title}</h3>
-                <p className="project-description">{description}</p>
-                <div className="project-tags">
-                    {tags.map((tag, index) => (
-                        <span key={index} className="tag">{tag}</span>
-                    ))}
-                </div>
-                <div className="project-links">
-                    {demoLink && (
-                        <a href={demoLink} target="_blank" rel="noopener noreferrer" className="link">
-                            <ExternalLink size={18} /> Demo
-                        </a>
-                    )}
-                    {repoLink && (
-                        <a href={repoLink} target="_blank" rel="noopener noreferrer" className="link">
-                            <Github size={18} /> Code
-                        </a>
-                    )}
-                </div>
-            </div>
-            <style>{`
+  return (
+    <div className="project-card">
+      <div className="project-image">
+        {image ? (
+          <img src={image} alt={title} />
+        ) : (
+          <div className="placeholder-image"></div>
+        )}
+      </div>
+      <div className="project-content">
+        <h3 className="project-title">{title}</h3>
+        <p className="project-description">{description}</p>
+        <div className="project-tags">
+          {tags.map((tag, index) => (
+            <span key={index} className="tag">{tag}</span>
+          ))}
+        </div>
+        <div className="project-links">
+          {demoLink && (
+            <a href={demoLink} target="_blank" rel="noopener noreferrer" className="link">
+              <ExternalLink size={18} /> Demo
+            </a>
+          )}
+          {repoLink && (
+            <a href={repoLink} target="_blank" rel="noopener noreferrer" className="link">
+              <Github size={18} /> Code
+            </a>
+          )}
+        </div>
+      </div>
+      <style>{`
         .project-card {
           background: var(--bg-secondary);
           border: 1px solid var(--border);
@@ -45,14 +45,20 @@ const ProjectCard = ({ title, description, tags, image, demoLink, repoLink }) =>
           border-color: var(--accent);
         }
         .project-image {
-          height: 200px;
-          background: #2d3748;
+          height: 240px;
+          background: #1a202c;
           overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
         }
         .project-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
           transition: transform 0.3s;
         }
         .project-card:hover .project-image img {
@@ -108,8 +114,8 @@ const ProjectCard = ({ title, description, tags, image, demoLink, repoLink }) =>
           color: var(--accent);
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ProjectCard;

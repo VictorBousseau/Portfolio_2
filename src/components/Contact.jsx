@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -12,21 +12,35 @@ const Contact = () => {
             <Mail className="contact-icon" />
             <div>
               <h3>Email</h3>
-              <a href="mailto:contact@example.com">bousseauvictor49@gmail.com</a>
+              <a href="mailto:bousseauvictor49@gmail.com">bousseauvictor49@gmail.com</a>
             </div>
           </div>
           <div className="contact-item">
             <MapPin className="contact-icon" />
             <div>
               <h3>Localisation</h3>
-              <p>France</p>
+              <p>Angers / Rennes, France</p>
             </div>
           </div>
           <div className="contact-item">
             <Phone className="contact-icon" />
             <div>
               <h3>Téléphone</h3>
-              <p>+33 7 83 49 72 24</p>
+              <a href="tel:+33783497224">07 83 49 72 24</a>
+            </div>
+          </div>
+          <div className="contact-item">
+            <Linkedin className="contact-icon" />
+            <div>
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/victor-bousseau/" target="_blank" rel="noopener noreferrer">victor-bousseau</a>
+            </div>
+          </div>
+          <div className="contact-item">
+            <Github className="contact-icon" />
+            <div>
+              <h3>GitHub</h3>
+              <a href="https://github.com/VictorBousseau" target="_blank" rel="noopener noreferrer">VictorBousseau</a>
             </div>
           </div>
         </div>

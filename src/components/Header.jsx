@@ -1,28 +1,28 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Header = () => {
-    return (
-        <header className="header">
-            <div className="container header-content">
-                <div className="logo">Portfolio</div>
-                <nav className="nav">
-                    <a href="#projects" className="nav-link">Projets</a>
-                    <a href="#about" className="nav-link">À propos</a>
-                    <a href="#contact" className="nav-link">Contact</a>
-                </nav>
-                <div className="socials">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Github">
-                        <Github size={20} />
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <Linkedin size={20} />
-                    </a>
-                    <a href="mailto:contact@example.com" aria-label="Email">
-                        <Mail size={20} />
-                    </a>
-                </div>
-            </div>
-            <style>{`
+  return (
+    <header className="header">
+      <div className="container header-content">
+        <div className="logo">Portfolio</div>
+        <nav className="nav">
+          <a href="#projects" className="nav-link">Projets</a>
+          <a href="#about" className="nav-link">À propos</a>
+          <a href="#contact" className="nav-link">Contact</a>
+        </nav>
+        <div className="socials">
+          <a href="https://github.com/VictorBousseau" target="_blank" rel="noopener noreferrer" aria-label="Github">
+            <Github size={20} />
+          </a>
+          <a href="https://www.linkedin.com/in/victor-bousseau/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Linkedin size={20} />
+          </a>
+          <a href="mailto:bousseauvictor49@gmail.com" aria-label="Email">
+            <Mail size={20} />
+          </a>
+        </div>
+      </div>
+      <style>{`
         .header {
           position: fixed;
           top: 0;
@@ -67,8 +67,8 @@ const Header = () => {
           .nav { display: none; }
         }
       `}</style>
-        </header>
-    );
+    </header>
+  );
 };
 
 export default Header;

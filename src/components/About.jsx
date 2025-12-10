@@ -11,7 +11,16 @@ const About = () => {
           <h3 className="column-title"><Briefcase className="icon" /> Expériences</h3>
           <div className="timeline">
             <div className="timeline-item">
-              <span className="date">Sept 2023 - Aout 2024</span>
+              <span className="date">Sept 2024 - Présent</span>
+              <h4>Alternance - Chargé d'Études Data</h4>
+              <p className="company">Harmonie Mutuelle, Rennes</p>
+              <p className="description">
+                Direction Distribution - Équipe Pilotage Performance Commercial. Création de tableaux de bord Power BI pour le suivi des offres et des objectifs commerciaux.
+                Analyses en Python, Machine Learning (prédiction d'acceptation des propositions commerciales), veille technologique (Fabric, Red Hat OpenShift).
+              </p>
+            </div>
+            <div className="timeline-item">
+              <span className="date">Sept 2023 - Août 2024</span>
               <h4>Alternance - Service Pilotage de la Performance</h4>
               <p className="company">ESSCA, Angers</p>
               <p className="description">
@@ -31,9 +40,17 @@ const About = () => {
           <h3 className="column-title" style={{ marginTop: '2rem' }}><GraduationCap className="icon" /> Formation</h3>
           <div className="timeline">
             <div className="timeline-item">
-              <span className="date">2021 - Présent</span>
-              <h4>BUT Science des Données (3ème année)</h4>
-              <p className="company">Université de Vannes (56)</p>
+              <span className="date">2024 - 2026</span>
+              <h4>Master MIASHS - Ingénierie des Données et Optimisation</h4>
+              <p className="company">Institut des Mathématiques Appliquées, UCO Angers</p>
+              <p className="description">
+                Modélisation, simulation et optimisation • Statistiques et Data Science avancées • Informatique décisionnelle
+              </p>
+            </div>
+            <div className="timeline-item">
+              <span className="date">2021 - 2024</span>
+              <h4>BUT Science des Données</h4>
+              <p className="company">IUT de Vannes (56)</p>
             </div>
             <div className="timeline-item">
               <span className="date">2019 - 2021</span>
@@ -52,6 +69,7 @@ const About = () => {
             <div className="tags">
               <span>Python</span><span>R</span><span>SQL</span><span>Power BI</span>
               <span>Talend</span><span>SAS</span><span>VBA</span><span>HTML</span>
+              <span>Git</span><span>PySpark</span><span>Fabric</span>
               <span>Jupyter</span><span>RStudio</span>
             </div>
           </div>
@@ -64,8 +82,9 @@ const About = () => {
           </div>
 
           <div className="skill-category">
-            <h4><BarChart2 size={18} /> Statistiques</h4>
+            <h4><BarChart2 size={18} /> Data Science & Machine Learning</h4>
             <div className="tags">
+              <span>Machine Learning Avancé</span>
               <span>Classification supervisée/non-supervisée</span>
               <span>Régression</span><span>ACP</span><span>Séries temporelles</span>
               <span>Statistiques inférentielles</span>

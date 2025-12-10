@@ -9,9 +9,9 @@ const Hero = () => {
           <span className="highlight">Data Science & Analytics</span>
         </h1>
         <p className="hero-description">
-          Étudiant de 23 ans, dynamique et curieux. Je recherche actuellement un <strong>Master dans le domaine de la Science des Données</strong>.
+          Étudiant de 25 ans en <strong>Master MIASHS - Ingénierie des Données et Optimisation</strong> à l'UCO Angers.
           <br />
-          Fort d'une expérience en alternance et de projets concrets en Business Intelligence et Analyse Statistique.
+          En alternance chez <strong>Harmonie Mutuelle</strong> en tant que Chargé d'Études Data, je développe mes compétences en Business Intelligence, analyse de données et Machine Learning.
         </p>
         <div className="hero-actions">
           <a href="#projects" className="btn btn-primary">
@@ -24,12 +24,13 @@ const Hero = () => {
       </div>
       <style>{`
         .hero {
-          min-height: 80vh;
+          min-height: 60vh;
           display: flex;
           align-items: center;
           justify-content: center;
           text-align: center;
-          padding: 4rem 0;
+          padding: 2rem 0 3rem;
+          margin-top: 4rem;
         }
         .hero-title {
           font-size: 4rem;
