@@ -1,6 +1,33 @@
 import { Mail, MapPin, Phone, Linkedin, Github } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
+  // REMPLACE "YOUR_FORM_ID" PAR TON PROPRE ID FORMSPREE (ex: "xzyqywjk")
+  const [state, handleSubmit] = useForm("xjknapkd");
+
+  if (state.succeeded) {
+    return (
+      <section id="contact" className="section">
+        <h2 className="title">Me Contacter</h2>
+        <div style={{ textAlign: 'center', padding: '3rem', background: 'var(--bg-secondary)', borderRadius: '1rem' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--accent)' }}>Message envoyé avec succès !</h3>
+          <p style={{ color: 'var(--text-secondary)' }}>Merci de m'avoir contacté. Je vous répondrai dès que possible.</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="btn btn-secondary"
+            style={{ marginTop: '2rem' }}
+          >
+            Retour au formulaire
+          </button>
+        </div>
+        {/* Styles gardés pour la cohérence si on veut réafficher d'autres éléments */}
+        <style>{`
+            /* Vos styles existants... */
+           `}</style>
+      </section>
+    );
+  }
+
   return (
     <section id="contact" className="section">
       <h2 className="title">Me Contacter</h2>
@@ -45,20 +72,25 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Nom</label>
-            <input type="text" id="name" placeholder="Votre nom" />
+            <input type="text" id="name" name="name" placeholder="Votre nom" required />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="votre@email.com" />
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Votre message..."></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
           </div>
-          <button type="submit" className="btn btn-primary">Envoyer</button>
+          <button type="submit" className="btn btn-primary" disabled={state.submitting}>
+            {state.submitting ? 'Envoi en cours...' : 'Envoyer'}
+          </button>
         </form>
       </div>
 

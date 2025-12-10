@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <main className="container" style={{ paddingTop: '8rem', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <main className="container" style={{ paddingTop: '6rem', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <Hero />
         <Projects />
         <About />

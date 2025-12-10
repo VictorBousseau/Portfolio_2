@@ -24,13 +24,14 @@ const Hero = () => {
       </div>
       <style>{`
         .hero {
-          min-height: 60vh;
+          min-height: auto;
           display: flex;
           align-items: center;
           justify-content: center;
           text-align: center;
-          padding: 2rem 0 3rem;
-          margin-top: 4rem;
+          padding: 1rem 0 2rem;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
         }
         .hero-title {
           font-size: 4rem;
